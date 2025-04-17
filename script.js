@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Slider initialization started");
+  console.log("homepage-slider initialization started");
 
   const slides = document.querySelectorAll(".slide");
   const prevBtn = document.querySelector(".prev-btn");
   const nextBtn = document.querySelector(".next-btn");
-  const slider = document.querySelector(".slider");
+  const homepage-slider = document.querySelector(".homepage-slider");
 
   // Debugging checks
   if (!slides.length) console.error("No slides found!");
@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (slideInterval) clearInterval(slideInterval);
   }
 
-  // Initialize slider
-  function initSlider() {
+  // Initialize homepage-slider
+  function inithomepage-slider() {
     slides.forEach((slide, i) => {
       slide.style.transition = "opacity 1s ease";
       slide.style.position = "absolute";
@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
     startAutoplay();
   });
 
-  slider.addEventListener("mouseenter", stopAutoplay);
-  slider.addEventListener("mouseleave", startAutoplay);
+  homepage-slider.addEventListener("mouseenter", stopAutoplay);
+  homepage-slider.addEventListener("mouseleave", startAutoplay);
 
-  initSlider();
-  console.log("Slider initialized successfully");
+  inithomepage-slider();
+  console.log("homepage-slider initialized successfully");
 });
