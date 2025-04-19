@@ -14,12 +14,13 @@ body {
   line-height: 1.6;
 }
 .menu-items li a.active {
-  color: #842b25;
+  color: #333;
+  background-color: rgba(224, 152, 152, 0.2);
 }
 
 /* navigation */
 .navigation {
-  background-color: #c89b5b;
+  background-color: #b08040;
   display: flex;
   align-items: center;
   padding: 15px 30px;
@@ -46,16 +47,17 @@ body {
 
 .menu-items li a {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   font-weight: 600;
   font-size: 1.1rem;
   padding: 5px 10px;
   border-radius: 4px;
   transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .menu-items li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(196, 119, 119, 0.2);
 }
 
 /* Image homepage-slider */
@@ -321,7 +323,7 @@ footer {
   margin-top: 20px;
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #aaa;
+  color: #d0d0d0;
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid #444;
