@@ -52,11 +52,12 @@ $featured_recipes = $conn->query("SELECT * FROM recipes WHERE featured = 1 LIMIT
 <!-- Featured Recipes -->
 <section class="featured">
     <h2>Featured Recipes</h2>
-     <!-- <div class="recipe-grid">
+     
+    <div class="recipe-grid">
         <?php
         if ($featured_recipes->num_rows > 0) {
             while ($recipe = $featured_recipes->fetch_assoc()) {
-                echo '<div class="recipe-each">
+                echo '<div class="recipe-each" onclick="window.location=\'recipe_detail.php?id='.$recipe['id'].'\'" style="cursor: pointer;">
                     <img src="'.$recipe['image_path'].'" alt="'.htmlspecialchars($recipe['title']).'">
                     <div class="recipe-info">
                         <h3>'.htmlspecialchars($recipe['title']).'</h3>
@@ -68,27 +69,7 @@ $featured_recipes = $conn->query("SELECT * FROM recipes WHERE featured = 1 LIMIT
             echo '<p class="no-recipes">No featured recipes found</p>';
         }
         ?>
-    </div>   -->
-    <div class="recipe-grid">
-    <?php
-    if ($featured_recipes->num_rows > 0) {
-        while ($recipe = $featured_recipes->fetch_assoc()) {
-            echo '<a href="recipe_detail.php?id='.$recipe['id'].'" class="recipe-card-wrapper">
-                <div class="recipe-each">
-                    <img src="'.$recipe['image_path'].'" alt="'.htmlspecialchars($recipe['title']).'">
-                    <div class="recipe-info">
-                        <h3>'.htmlspecialchars($recipe['title']).'</h3>
-                        <p>'.htmlspecialchars($recipe['description']).'</p>
-                        <span class="view-link">View Recipe →</span>
-                    </div>
-                </div>
-            </a>';
-        }
-    } else {
-        echo '<p class="no-recipes">No featured recipes found</p>';
-    }
-    ?>
-</div>
+    </div>
     
     
 </section>
