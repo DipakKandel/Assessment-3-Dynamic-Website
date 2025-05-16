@@ -39,19 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <title>Add Recipe</title>
     <link rel="stylesheet" href="../stylesheet.css">
-    <style>
-        .recipe-form {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .recipe-form textarea {
-            min-height: 100px;
-        }
-    </style>
+   
 </head>
 <body>
     <div class="recipe-form">

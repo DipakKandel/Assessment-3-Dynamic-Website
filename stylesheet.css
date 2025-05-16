@@ -489,6 +489,67 @@ footer {
   color: #a5763d;
 }
 
+/* Tip Detail Page */
+.tip-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tip-meta {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.tip-featured-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.tip-content {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.tip-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.btn-back {
+  background: #f5f5f5;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-print {
+  background: #c89b5b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media print {
+  .navigation,
+  .footer-top,
+  .tip-actions {
+    display: none;
+  }
+  .tip-content {
+    font-size: 12pt;
+  }
+}
 /* for contact page */
 .contact-us {
   max-width: 700px;
@@ -802,4 +863,152 @@ footer {
   color: #c89b5b;
   font-weight: 600;
   font-size: 0.9rem;
+}
+
+/* add recipe admin */
+/* Main Form Container */
+.recipe-form {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form Header */
+.recipe-form h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ecf0f1;
+  font-size: 28px;
+}
+
+/* Form Elements */
+.recipe-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 16px;
+}
+
+.recipe-form input[type="text"],
+.recipe-form select,
+.recipe-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: #f9f9f9;
+}
+
+.recipe-form input[type="text"]:focus,
+.recipe-form select:focus,
+.recipe-form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  background-color: #fff;
+}
+
+.recipe-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Checkbox Styling */
+.recipe-form input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+/* File Input Styling */
+.recipe-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px dashed #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+/* Button Styling */
+.recipe-form button[type="submit"] {
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.recipe-form button[type="submit"]:hover {
+  background-color: #2ecc71;
+}
+
+.btn-cancel {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+  margin-left: 15px;
+}
+
+.btn-cancel:hover {
+  background-color: #c0392b;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .recipe-form {
+    padding: 20px;
+    margin: 20px 15px;
+  }
+
+  .recipe-form button[type="submit"],
+  .btn-cancel {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Visual Feedback for Required Fields */
+.recipe-form input:required,
+.recipe-form select:required,
+.recipe-form textarea:required {
+  border-left: 3px solid #3498db;
+}
+
+/* Checkbox Label Alignment */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
