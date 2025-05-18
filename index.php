@@ -5,7 +5,7 @@ require 'includes/config.php';
 require 'includes/header.php';
 
 // Fetch featured recipes
-$featured_recipes = $conn->query("SELECT * FROM recipes WHERE featured = 1 LIMIT 8");
+$featured_recipes = $conn->query("SELECT * FROM recipes WHERE featured = 1 LIMIT 10");
 ?>
 
 <!-- Slider Section -->
