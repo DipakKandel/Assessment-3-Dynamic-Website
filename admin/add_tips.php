@@ -16,18 +16,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $featured = isset($_POST['featured']) ? 1 : 0;
     
     // Handle file upload
-    $image_path = 'images/recipe/default.jpg';
+    $image_path = 'images/tips/default.jpg';
     if ($_FILES['image']['error'] === UPLOAD_ERR_OK) {
-        $target_dir = "../images/recipe/";
+        $target_dir = "../images/tips/";
         $target_file = $target_dir . basename($_FILES['image']['name']);
         if (move_uploaded_file($_FILES['image']['tmp_name'], $target_file)) {
-            $image_path = 'images/recipe/' . basename($_FILES['image']['name']);
+            $image_path = 'images/tips/' . basename($_FILES['image']['name']);
         }
     }
 
     // Insert into database
-    $stmt = $conn->prepare("INSERT INTO recipes (title, category, description, ingredients, instructions, image_path, featured) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssssi", $title, $category, $description, $ingredients, $instructions, $image_path, $featured);
+    $stmt = $conn->prepare("INSERT INTO tips (title, content, image_path) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssssssi", $title, $content, $image_path, );
     $stmt->execute();
     
     header('Location: dashboard.php');
@@ -43,23 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="recipe-form">
-        <h2>Add New Recipe</h2>
+        <h2>Add New Tips</h2>
         <form method="POST" enctype="multipart/form-data">
             <label>Title: <input type="text" name="title" required></label>
-            <label>Category:
-                <select name="category" required>
-                    <option value="Breakfast">Breakfast</option>
-                    <option value="Lunch">Lunch</option>
-                    <option value="Dinner">Dinner</option>
-                    <option value="Dessert">Dessert</option>
-                </select>
-            </label>
-            <label>Description: <textarea name="description" required></textarea></label>
-            <label>Ingredients: <textarea name="ingredients" required></textarea></label>
-            <label>Instructions: <textarea name="instructions" required></textarea></label>
-            <label>Featured: <input type="checkbox" name="featured"></label>
+            <label>Content: <textarea name="Content" required></textarea></label>
             <label>Image: <input type="file" name="image"></label>
-            <button type="submit">Save Recipe</button>
+            <button type="submit">Save Tips</button>
             <a href="dashboard.php" class="btn-cancel">Cancel</a>
         </form>
     </div>
