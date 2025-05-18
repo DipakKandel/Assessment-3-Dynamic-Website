@@ -4,7 +4,6 @@ $page_title = 'Recipe Categories - Tasty Treasures';
 require 'includes/config.php';
 require 'includes/header.php';
 
-// Get category from URL if specified
 $current_category = isset($_GET['cat']) ? $_GET['cat'] : null;
 ?>
 
@@ -17,11 +16,12 @@ $current_category = isset($_GET['cat']) ? $_GET['cat'] : null;
         $categories = $conn->query("SELECT DISTINCT category FROM recipes");
         while ($category = $categories->fetch_assoc()) {
             echo '<div class="category-card">
-                <a href="categories.php?cat='.urlencode($category['category']).'">
+                <a href="categories.php?cat='.urlencode($category['category']).'" style="text-decoration:none;">
                     <img src="images/categories/'.strtolower($category['category']).'.jpg" alt="'.htmlspecialchars($category['category']).'">
                     <h3>'.htmlspecialchars($category['category']).'</h3>
                 </a>
             </div>';
+
         }
         ?>
     </div>

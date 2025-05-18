@@ -74,6 +74,8 @@ $featured_recipes = $conn->query("SELECT * FROM recipes WHERE featured = 1 LIMIT
     
 </section>
 
+
+
 <?php
 $conn->close();
 require 'includes/footer.php';
