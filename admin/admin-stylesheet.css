@@ -1,0 +1,142 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+.dashboard {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px 10px 20px 0;
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.action-links a {
+  margin-right: 10px;
+  color: #dc3545;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.action-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 15px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  th {
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    margin-bottom: 10px;
+  }
+
+  td::before {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  td:nth-of-type(1)::before {
+    content: "Title";
+  }
+  td:nth-of-type(2)::before {
+    content: "Category/Content";
+  }
+  td:nth-of-type(3)::before {
+    content: "Featured/Actions";
+  }
+}
