@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #007bff;
+  background-color: #c89b5b;
   color: white;
   padding: 15px 30px;
   border-bottom: 1px solid #ccc;
@@ -47,7 +47,7 @@ body {
   display: inline-block;
   margin: 10px 10px 20px 0;
   padding: 10px 16px;
-  background-color: #007bff;
+  background-color: #c89b5b;
   color: #fff;
   text-decoration: none;
   border-radius: 8px;
@@ -55,7 +55,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #c89b5b;
 }
 
 table {
@@ -72,7 +72,7 @@ td {
 }
 
 th {
-  background-color: #007bff;
+  background-color: #c89b5b;
   color: white;
 }
 

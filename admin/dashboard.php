@@ -14,7 +14,7 @@ require '../includes/config.php';
 </head>
 <body>
     <div class="header">
-        <h2>Admin Dashboard</h2>
+        <h2>Recipe Dashboard</h2>
         <a href="logout.php" class="logout-btn">Logout</a>
     </div>
 
