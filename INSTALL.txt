@@ -1,0 +1,82 @@
+========================================
+Tasty Treasures Cookbook – Installation
+========================================
+
+This document explains how to set up the Tasty Treasures Cookbook project on a local machine using XAMPP.
+
+--------------------------------------------------
+🛠️  Prerequisites
+--------------------------------------------------
+- XAMPP installed (https://www.apachefriends.org/)
+- Apache and MySQL modules running
+- Web browser (e.g., Chrome)
+
+--------------------------------------------------
+📂 Project Folder Structure (example)
+--------------------------------------------------
+/tasty-treasures/
+|-- index.php
+|-- categories.php 
+|-- ... and similarly all other php pages
+|-- includes/
+|   |-- config.php
+|-- admin/
+|   |-- dashboard.php
+|-- images/
+|-- database/
+|   |-- tasty_treasures.sql
+|-- INSTALL.txt
+
+--------------------------------------------------
+✅ Steps to Install & Run the Website
+--------------------------------------------------
+
+1. 🔄 **Start XAMPP**
+   - Open the XAMPP Control Panel
+   - Click “Start” for both **Apache** and **MySQL**
+
+2. 🌐 **Open phpMyAdmin**
+   - Go to: http://localhost/phpmyadmin
+
+3. 🗄️ **Create a New Database**
+   - Click **New**
+   - Enter the database name: `tasty_treasures`
+   - Click **Create**
+
+4. 📤 **Import the SQL File**
+   - Click on the `tasty_treasures` database
+   - Go to the **Import** tab
+   - Click **Choose File** and select:
+     `database/tasty_treasures.sql`
+   - Click **Go**
+
+5. ⚙️ **Check Configuration**
+   - Open `includes/config.php`
+   - Make sure it looks like this:
+
+     ```php
+     $db_host = 'localhost';
+     $db_user = 'root';
+     $db_pass = '';
+     $db_name = 'tasty_treasures';
+     ```
+
+6. 🚀 **Move the Project to htdocs**
+   - Copy the entire project folder (e.g., `tasty-treasures`) into:
+     `C:\xampp\htdocs\`
+
+7. 🌍 **Run the Project**
+   - Open your browser and go to:
+     http://localhost/tasty-treasures/
+
+8. 🔐 **Admin Login (for testing)**
+   - URL: http://localhost/tasty-treasures/admin/index.php
+   - Username: `admin`
+   - Password: `dipak`
+
+--------------------------------------------------
+📩 Contact / Issues
+--------------------------------------------------
+For setup issues, contact Roshan Dahal, Dipak Kandel or Sandip Luitel.
+
+Happy Cooking! 🍲
