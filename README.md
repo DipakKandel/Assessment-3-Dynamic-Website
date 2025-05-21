@@ -1,4 +1,5 @@
 
+---
 
 ```markdown
 # 🍴 Tasty Treasures Cookbook
@@ -81,6 +82,9 @@ Quick Summary:
 ---
 
 
+
+---
+
 ## 🧠 Built With
 
 - PHP
@@ -94,8 +98,8 @@ Quick Summary:
 ## 👥 Contributors
 
 - **Dipak Kandel** – Database design, admin panel, backend logic
-- **Roshan** – Front-end design, homepage layout, CSS styling
-- **Sandip** – Tips section, contact form, layout integration
+- **Roshan Dahal** – Front-end design, homepage layout, CSS styling
+- **Sandip Luitel** – Tips section, contact form, layout integration
 
 ---
 
@@ -114,3 +118,4 @@ This project is created for educational purposes. Feel free to use, modify, and 
 ```
 
 ---
+
